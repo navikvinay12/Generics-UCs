@@ -10,7 +10,8 @@ namespace GenericsUCs
             Console.WriteLine("Choose any one from below options");
             Console.WriteLine("1:Find Max Num\n" +
                 "2:FindMax using Generic Method\n" +
-                "3:FindMax using Generic Class");
+                "3:FindMax using Generic Class\n" +
+                "4:Param Concept~takes any no of parameters");
 
             int option = Convert.ToInt32(Console.ReadLine());
             switch (option)
@@ -31,6 +32,10 @@ namespace GenericsUCs
                     new FindMaxGenericClass<int>(20, 30, 12).TestMaximum();                   //find max using generic class .
                     new FindMaxGenericClass<float>(20.45f, 30.11f, 12.99f).TestMaximum();
                     new FindMaxGenericClass<string>("abc", "def","ghi").TestMaximum();
+                    break;
+                case 4:     //UC4 .
+                    FindMaxParams.MaxValue(45, 23, 54, 6, 23, 43);  //using param -sample 1
+                    FindMaxParams.MaxValue(45, 6, 23, 43);      //using param-sample 2
                     break;
                 default:
                     Console.WriteLine("Please choose number within given range!");
